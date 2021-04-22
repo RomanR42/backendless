@@ -1,0 +1,98 @@
+.header {
+    position: fixed;
+    z-index: 100;
+    top:0;
+    left:0;
+    right: 0;
+    &__inner {
+        height: 40px;
+        padding: 0px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 5px solid #808080;
+        @extend %header-footer-light;
+    }
+    &__logo {
+        font-size: 20px;
+    }
+    &__label {
+        cursor: pointer;
+        transition: all 0.5s;
+        &:hover {
+            color: blue;
+        }
+    }
+    &__toggle-btns {
+        display: none;
+    }
+    &__toggle-btn {
+        border-radius: 10px;
+        outline: none;
+        border: 1px solid blue;
+        padding: 0px 10px;
+        cursor: pointer;;
+    }
+    &__toggle-btn--active {
+        color:white;
+        background-color: red;
+    }
+    &__toggle-select {
+        display: none;
+    }
+    &__select-field {
+        border-radius: 5px;
+        outline: none;
+    }
+}
+@media screen and (max-width:1080px){
+    .header {
+        &__inner {
+            padding: 0px 15px;
+            height: 45px;
+        }
+        &__logo {
+            font-size: 25px;
+        }
+        &__toggle-btns {
+            display: block;
+        }
+        &__toggle-btn {
+            margin-left: 25px;
+        }
+        &__toggle-radio {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width:640px){
+    .header {
+        &__inner {
+            padding: 0px 20px;
+            height: 55px;
+        }
+        &__logo {
+            font-size: 30px;
+        }        
+        &__toggle-btns {
+            display: none;
+        }
+        &__toggle-select {
+            display: block;
+        }
+    }
+}
+@media screen and (max-width:410px){
+    .header {
+        &__logo {
+            font-size: 20px;
+        }  
+        &__inner {
+            padding: 0px 15px;
+        }
+        &__select-field {
+            width:150px;
+            font-size: 14px;
+        }
+    }
+}
